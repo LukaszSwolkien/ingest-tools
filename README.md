@@ -1,15 +1,15 @@
-# Ingest Tools to generate sample data for Splunk Observability Suite
-Sample bash scripts to push data into o11y suite. 
+# Tools to feed Splunk o11y with sample data
+Sample bash scripts to POST json data over http into Splunk o11y suite. 
 
-Python sample data generators are available here: https://github.com/LukaszSwolkien/ingest-tools-py
-Golang Sample data generators are available here: https://github.com/LukaszSwolkien/ingest-tools-go
+* Python sample data generators are available here: https://github.com/LukaszSwolkien/ingest-tools-py
+* Golang Sample data generators are available here: https://github.com/LukaszSwolkien/ingest-tools-go
 
 ## Usage examples:
 
 Create your organisation using Splunk API (see `create_org.sh`) and setup access token(s).
-Remember to set secrets in the `.secrets.yaml` file. This file is used by scripts.
+Remember to create `.secrets.yaml` file with secrets, see [here](#Setup-project).
 
-To leadn more about sending data to Splunk O11y see: https://dev.splunk.com/observability/reference/api/ingest_data/latest
+To learn more about sending data to Splunk O11y see: https://dev.splunk.com/observability/reference/api/ingest_data/latest
 
 ### Metric data generator (SignalFx format):
 ```bash
