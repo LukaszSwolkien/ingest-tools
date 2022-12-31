@@ -1,4 +1,4 @@
-# Tools to feed Splunk o11y with sample data
+# Ingest-Tools
 Sample bash scripts to POST json data over http into Splunk o11y suite. 
 
 * Python sample data generators are available here: https://github.com/LukaszSwolkien/ingest-tools-py
