@@ -11,17 +11,17 @@ Remember to create `.secrets.yaml` file with secrets, see [here](#Setup-project)
 
 To learn more about sending data to Splunk O11y see: https://dev.splunk.com/observability/reference/api/ingest_data/latest
 
-### Metric data generator (SignalFx format):
+### Post metric data (SignalFx format):
 ```bash
 ./sample_metric_ingest.sh
 ```
 
-### Trace data generator (Zipkin format):
+### Post trace data (Zipkin format):
 ```bash
 ./sample_trace_ingest.sh
 ```
 
-### Log data generator (HEC format):
+### Post log data (HEC format):
 ```bash
 ./sample_log_ingest.sh
 ```
