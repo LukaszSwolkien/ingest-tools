@@ -2,7 +2,7 @@
 Sample bash scripts to POST json data over http into Splunk o11y suite. 
 
 * Python sample data generators are available here: https://github.com/LukaszSwolkien/ingest-tools-py
-* Golang Sample data generators are available here: https://github.com/LukaszSwolkien/ingest-tools-go
+* Golang sample data generators are available here: https://github.com/LukaszSwolkien/ingest-tools-go
 
 ## Usage examples:
 
