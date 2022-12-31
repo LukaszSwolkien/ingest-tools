@@ -2,33 +2,33 @@
 secrets_file=".secrets.yaml"
 
 read_account_trial_endpoint() {
-    endpoint=$(grep SPLUNK_ACCOUNT_TRIAL $secrets_file | tr -d '"'); 
-    endpoint=${endpoint//*SPLUNK_ACCOUNT_TRIAL: /};
+    endpoint=$(grep splunk-account-trial $secrets_file | tr -d '"'); 
+    endpoint=${endpoint//*splunk-account-trial: /};
 }
 
 read_first_name() {
-    firstName=$(grep MY_FIRST_NAME $secrets_file | tr -d '"'); 
-    firstName=${firstName//*MY_FIRST_NAME: /};
+    firstName=$(grep my-first-name $secrets_file | tr -d '"'); 
+    firstName=${firstName//*my-first-name: /};
 }
 
 read_last_name() {
-    lastName=$(grep MY_LAST_NAME $secrets_file | tr -d '"'); 
-    lastName=${lastName//*MY_LAST_NAME: /};
+    lastName=$(grep my-last-name $secrets_file | tr -d '"'); 
+    lastName=${lastName//*my-last-name: /};
 }
 
 read_email() {
-    email=$(grep MY_EMAIL $secrets_file | tr -d '"'); 
-    email=${email//*MY_EMAIL: /};
+    email=$(grep my-email $secrets_file | tr -d '"'); 
+    email=${email//*my-email: /};
 }
 
 read_org_name() {
-    orgName=$(grep MY_ORG_NAME $secrets_file | tr -d '"'); 
-    orgName=${orgName//*MY_ORG_NAME: /};
+    orgName=$(grep my-org-name $secrets_file | tr -d '"'); 
+    orgName=${orgName//*my-org-name: /};
 }
 
 read_company_name() {
-    companyName=$(grep MY_COMPANY_NAME $secrets_file | tr -d '"'); 
-    companyName=${companyName//*MY_COMPANY_NAME: /};
+    companyName=$(grep my-company-name $secrets_file | tr -d '"'); 
+    companyName=${companyName//*my-company-name: /};
 }
 
 

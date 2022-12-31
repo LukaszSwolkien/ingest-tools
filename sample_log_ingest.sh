@@ -2,14 +2,14 @@
 secrets_file=".secrets.yaml"
 
 read_token_from_yaml() {
-    secret=$(grep SPLUNK_INGEST_TOKEN $secrets_file | tr -d '"'); 
-    secret=${secret//*SPLUNK_INGEST_TOKEN: /};
+    secret=$(grep splunk-ingest-token $secrets_file | tr -d '"'); 
+    secret=${secret//*splunk-ingest-token: /};
 }
 
 
 read_ingest_endpoint() {
-    ingest_endpoint=$(grep SPLUNK_INGEST $secrets_file | tr -d '"')
-    ingest_endpoint=${ingest_endpoint//*SPLUNK_INGEST: /}
+    ingest_endpoint=$(grep splunk-ingest $secrets_file | tr -d '"')
+    ingest_endpoint=${ingest_endpoint//*splunk-ingest: /}
     # ingest_endpoint="${ingest_endpoint}/services/collector/event"
     ingest_endpoint="${ingest_endpoint}/v1/log"
 }

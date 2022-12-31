@@ -3,14 +3,14 @@ secrets_file=".secrets.yaml"
 
 
 read_token_from_yaml() {
-    secret=$(grep SPLUNK_API_TOKEN $secrets_file | tr -d '"'); 
-    secret=${secret//*SPLUNK_API_TOKEN: /};
+    secret=$(grep splunk-api-token $secrets_file | tr -d '"'); 
+    secret=${secret//*splunk-api-token: /};
 }
 
 
 read_api_endpoint() {
-    api_endpoint=$(grep SPLUNK_API $secrets_file | tr -d '"')
-    api_endpoint=${api_endpoint//*SPLUNK_API: /}
+    api_endpoint=$(grep splunk-api $secrets_file | tr -d '"')
+    api_endpoint=${api_endpoint//*splunk-api: /}
 }
 
 if [ -f "$secrets_file" ]
