@@ -31,7 +31,7 @@ You can run any script periodicaly as a cron job, for example:
 ```crontab -e```
 
 ```vim
-*/1 * * * * /home/ec2-user/Devel/test_integration/sample_metic_ingest.sh
+*/1 * * * * /home/ec2-user/Devel/ingest-tools/sample_metic_ingest.sh
 ```
 
 ## Setup project 
