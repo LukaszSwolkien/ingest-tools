@@ -39,7 +39,7 @@ You can run any script periodicaly as a cron job, for example:
 ./get_integrations.sh -i https://api.lab0.signalfx.com/v2/integration -t YOUR_ACCESS_TOKEN
 ```
 
-## Setup project 
+## Setup organisation 
 To use `create_org.sh` script you need to define following variables in `.secrets.yaml` file:
 
 ```yaml
