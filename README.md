@@ -7,23 +7,22 @@ Sample bash scripts to POST json data over http into Splunk o11y suite.
 ## Usage examples:
 
 Create your organisation using Splunk API (see `create_org.sh`) and setup access token(s).
-Remember to create `.secrets.yaml` file with secrets, see [here](#Setup-project).
 
 To learn more about sending data to Splunk O11y see: https://dev.splunk.com/observability/reference/api/ingest_data/latest
 
 ### Post metric data (SignalFx format):
 ```bash
-./sample_metric_ingest.sh
+./sample_metric_ingest.sh -i https://ingest.REALM.signalfx.com/v2/datapoint -t YOUR_ACCESS_TOKEN
 ```
 
 ### Post trace data (Zipkin format):
 ```bash
-./sample_trace_ingest.sh
+./sample_trace_ingest.sh -i https://ingest.REALM.signalfx.com/v2/trace -t YOUR_ACCESS_TOKEN
 ```
 
 ### Post log data (HEC format):
 ```bash
-./sample_log_ingest.sh
+./sample_log_ingest.sh -i https://ingest.REALM.signalfx.com/v1/log -t YOUR_ACCESS_TOKEN
 ```
 
 You can run any script periodicaly as a cron job, for example:
@@ -31,19 +30,17 @@ You can run any script periodicaly as a cron job, for example:
 ```crontab -e```
 
 ```vim
-*/1 * * * * /home/ec2-user/Devel/ingest-tools/sample_metic_ingest.sh
+*/1 * * * * /home/ec2-user/Devel/ingest-tools/sample_metic_ingest.sh -i https://ingest.REALM.signalfx.com/v2/datapoint -t YOUR_ACCESS_TOKEN
+```
+
+### Get cloud integration object:
+
+```bash
+./get_integrations.sh -i https://api.lab0.signalfx.com/v2/integration -t YOUR_ACCESS_TOKEN
 ```
 
 ## Setup project 
-You need to create `.secrets.yaml` file with tokens and endpoints defined, for example:
-
-```yaml
-splunk-ingest-token: "your_access_token"
-splunk-api-token: "your_access_token"
-splunk-ingest: "https://ingest.{realm}.signalfx.com"
-splunk-api: "https://api.{realm}.signalfx.com/v2/integration"
-```
-to use `create_org.sh` you need to define following variables:
+To use `create_org.sh` script you need to define following variables in `.secrets.yaml` file:
 
 ```yaml
 my-first-name: "Lukasz"
