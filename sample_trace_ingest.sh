@@ -44,7 +44,3 @@ payload='
 ]'
 echo "* Sending sample data: $payload"
 curl -X POST $ingest_endpoint -H "Content-Type: application/json" -H "X-SF-Token: $secret" -d "$payload" -i
-
-
-
-# curl -X POST https://external-ingest.lab0.signalfx.com/v2/datapoint -H "Content-Type: application/json" -H "X-SF-Token: $secret" -d '{"gauge": [{"metric": "heartbeat", "value": 100}]}' -i

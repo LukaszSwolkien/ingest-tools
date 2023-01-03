@@ -40,4 +40,3 @@ payload='
 
 echo "* Sending sample data: $payload"
 curl -X POST $ingest_endpoint -H "Content-Type: application/json" -H "X-SF-Token: $secret" -d "$payload" -i
-

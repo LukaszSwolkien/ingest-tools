@@ -31,9 +31,6 @@ read_company_name() {
     companyName=${companyName//*my-company-name: /};
 }
 
-
-
-
 if [ -f "$secrets_file" ]
 then
   read_account_trial_endpoint

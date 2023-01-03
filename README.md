@@ -1,8 +1,9 @@
 # Ingest-Tools
 Sample bash scripts to POST json data over http into Splunk o11y suite. 
 
-* Python samples (client library [signalfx-python](https://github.com/signalfx/signalfx-python)) are available here: https://github.com/LukaszSwolkien/ingest-tools-py
 * Golang samples (OpenTelemetry Protocol [OTLP](https://github.com/open-telemetry/opentelemetry-proto-go)) are available here: https://github.com/LukaszSwolkien/ingest-tools-go
+
+* Python samples (client library [signalfx-python](https://github.com/signalfx/signalfx-python)) are available here: https://github.com/LukaszSwolkien/ingest-tools-py
 
 ## Usage examples:
 
