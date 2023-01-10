@@ -26,6 +26,10 @@ To learn more about sending data to Splunk O11y see: https://dev.splunk.com/obse
 ./sample_log_ingest.sh -i https://ingest.REALM.signalfx.com/v1/log -t YOUR_ACCESS_TOKEN
 ```
 
+### Post rum trace data (Zipkin format)
+```bash
+./sample_rum_ingest.sh -i https://rum-ingest.REALM.signalfx.com/v1/rum -t YOUR_RUM_TOKEN
+```
 You can run any script periodicaly as a cron job, for example:
 
 ```crontab -e```
@@ -33,6 +37,9 @@ You can run any script periodicaly as a cron job, for example:
 ```vim
 */1 * * * * /home/ec2-user/Devel/ingest-tools/sample_metic_ingest.sh -i https://ingest.REALM.signalfx.com/v2/datapoint -t YOUR_ACCESS_TOKEN
 ```
+
+./sample_otlp_trace_ingest.sh -i https://ingest.lab0.signalfx.com/v2/trace/otlp -t YOUR_ACCESS_TOKEN
+./sample_otlp_metric_ingest.sh -i https://ingest.lab0.signalfx.com/v2/datapoint/otlp -t YOUR_ACCESS_TOKEN
 
 ## Setup organisation 
 To use `create_org.sh` script you need to define following variables in `.secrets.yaml` file:
